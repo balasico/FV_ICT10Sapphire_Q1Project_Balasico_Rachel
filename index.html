@@ -43,7 +43,7 @@
 </nav>
 
 <!--MAIN CONTENT-->
-<div class="container w-75 my-5">
+<div class="container w-50 my-5">
 <div class="row bg-light bg-opacity-75 p-3 rounded-2 w-75 mx-auto p-3 text-center">
   
   <h1 class="">Welcome to Skeweererer!<h1>
@@ -55,26 +55,66 @@
 </div>
 </div>
 
-<!--Receipt Generator-->
-<div class="container w-50 my-5" id="fare-matrix">
-<div class="row bg-light bg-opacity-75 p-3 rounded-2 mx-auto p-3">
-  
-  <h1 class="text-center text-dark">Receipt Generator</h1>
-  <br><br>
+<!-- Receipt Generator -->
+<div class="container my-5">
+<div class="bg-light bg-opacity-75 p-4 rounded-3 mx-auto" style="max-width: 700px;">
 
-  <div class="col-sm mb-4">
+  <h1 class="text-center text-dark mb-4">Receipt Generator</h1>
 
-    <input type="checkbox" id="item5" value=129>
-    <label id="item5-label">Caramel Macchiato</label><br>
-    <button type="submit" py-click="create_order">Create Order</button><br><br>
-    <div id="show"></div>
-    
+  <!-- CHECKLIST -->
+  <div class="mb-4">
+
+    <div class="border rounded-2 p-2 mb-2 d-flex align-items-center justify-content-between">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="item1" value="99">
+            <label class="form-check-label fs-6" for="item1">Americano</label>
+      </div>
+      <span class="fw-bold text-info fs-6">₱99</span>
+    </div>
+
+    <div class="border rounded-2 p-2 mb-2 d-flex align-items-center justify-content-between">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="item2" value="129">
+          <label class="form-check-label fs-6" for="item2">Spanish Latte</label>
+      </div>
+      <span class="fw-bold text-info fs-6">₱129</span>
+    </div>
+
+    <div class="border rounded-2 p-2 mb-2 d-flex align-items-center justify-content-between">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="item3" value="189">
+          <label class="form-check-label fs-6" for="item3">Cold Brew Malt</label>
+      </div>
+      <span class="fw-bold text-info fs-6">₱189</span>
+    </div>
+
+    <div class="border rounded-2 p-2 mb-2 d-flex align-items-center justify-content-between">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="item4" value="159">
+          <label class="form-check-label fs-6" for="item4">Affogato</label>
+      </div>
+      <span class="fw-bold text-info fs-6">₱159</span>
+    </div>
+
+    <div class="border rounded-2 p-2 mb-2 d-flex align-items-center justify-content-between">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="item5" value="129">
+          <label class="form-check-label fs-6" for="item5">Caramel Macchiato</label>
+      </div>
+      <span class="fw-bold text-info fs-6">₱129</span>
+    </div>
+
   </div>
-  <br>
 
-  <button class="btn btn-info">Create Order</button>
+  <!-- BUTTON -->
+  <button type="submit" class="btn btn-info w-75 d-block mx-auto" py-click="create_order">🧾 Create Order</button>
+  <hr class="my-4">
 
+  <!-- SUMMARY -->
   <h3 id="X" class="mt-3 fs-6 fw-light text-center">Your order summary will appear here.</h3>
+    <div id="show-subtotal"></div>
+    <div id="show-tax"></div>
+    <div id="show-total" class="fw-bold"></div>
 
 </div>
 </div>
@@ -89,5 +129,6 @@
   </div>
 </footer>
 
+<script type="py" src="main.py"></script> 
 </body>
 </html>
