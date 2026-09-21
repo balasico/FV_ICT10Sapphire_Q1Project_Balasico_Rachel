@@ -18,3 +18,17 @@ def create_order (e):
     display(f'Total: ₱{total}', target="show-total")
 
 
+def generate_sku (e):
+    cat1 = document.getElementById("bev_id")
+    cat2 = document.getElementById("topps_id")
+    cat3 = document.getElementById("bkedgds_id")
+    cat4 = document.getElementById("othr_id")
+
+    cat_final = (float(cat1.value) * cat1.checked) + (float(cat2.value) * cat2.checked) + (float(cat3.value) * cat3.checked) + (float(cat4.value) * cat4.checked)
+
+    prodname = document.getElementById("productname")
+    qnty = document.getElementById("quantity")
+
+    final_prodname = (prodname[1]) + (prodname[2]) + (prodname[3])
+
+    display(f'Your Generated SKU: {cat_final}-{final_prodname}-{qnty}', target="show-sku")
