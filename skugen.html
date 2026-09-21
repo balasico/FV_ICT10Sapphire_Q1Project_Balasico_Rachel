@@ -63,25 +63,52 @@
   <br><br>
 
   <div class="col-sm mb-4">
-    <label for="category" class="form-label">Category</label>
-      <select class="form-select" id="category">
-        <option value="choose">Select Category</option>
-      </select>
-    <br>
 
+    <div class="border rounded-2 p-2 mb-2 d-flex align-items-center justify-content-between">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="bev_id" value="bev">
+        <label class="form-check-label fs-6" for="bev_id">Beverage</label>
+    </div>
+    </div>
+
+    <div class="border rounded-2 p-2 mb-2 d-flex align-items-center justify-content-between">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="topps_id" value="topps">
+        <label class="form-check-label fs-6" for="topps_id">Toppings</label>
+    </div>
+    </div>
+
+    <div class="border rounded-2 p-2 mb-2 d-flex align-items-center justify-content-between">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="bkedgds_id" value="bkedgds">
+        <label class="form-check-label fs-6" for="bkedgds_id">Baked Goods</label>
+    </div>
+    </div>
+
+    <div class="border rounded-2 p-2 mb-2 d-flex align-items-center justify-content-between">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="othr_id" value="othr">
+        <label class="form-check-label fs-6" for="other_id">Other</label>
+    </div>
+    </div>
+
+    
     <label for="productname" class="form-label">Product Name</label>
         <input type="text" class="form-control" id="productname" placeholder="e.g. Bottled Water">
     <br>
 
-    <label for="qnty" class="form-label">Stock Quantity</label>
-        <input type="text" class="form-control" id="qnty" placeholder="e.g. 50">
+    <label for="quantity" class="form-label">Stock Quantity</label>
+        <input type="number" class="form-control" id="quantity" placeholder="e.g. 50">
 
   </div>
   <br>
 
-  <button class="btn btn-info">Generate SKU</button>
+  <button type="submit" class="btn btn-info" py-click="generate_sku">Generate SKU</button>
+  <hr class="my-4">
 
   <h3 id="X" class="mt-3 fs-6 fw-light text-center">Your generated SKU will appear here.</h3>
+    <div id="show-sku"></div>
+
 
 </div>
 </div>
@@ -95,6 +122,7 @@
     <small>Q1 ICT10 Project: Balasico | © 2026</small>
   </div>
 </footer>
+
 <script type="py" src="main.py"></script> 
 </body>
 </html>
